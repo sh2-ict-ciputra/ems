@@ -77,15 +77,15 @@ $query_builder = true;
 $db['default'] = array(
     'dsn' => '',
     'port' => '1443', 
-    'password' => 'ciputraestate123',
-    'username' => 'ciputraestate',
+    // 'password' => 'ciputraestate123',
+    // 'username' => 'ciputraestate',
     
-    'hostname' => '.',
+    'hostname' => 'localhost',
                    
     'database' => 'ems',
-    // 'hostname' => '80.211.11.164',
-    // 'database' => 'ciputraEmsFajrika',
-    
+    'username' => 'sa',
+    'password' => 'abc123?',
+
     'dbdriver' => 'sqlsrv',
     'dbprefix' => '',
     'pconnect' => true,
