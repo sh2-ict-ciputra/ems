@@ -1,0 +1,11 @@
+
+20-03-26 08:28:54 = GET !"5BED01BB.01\/29" !
+20-03-26 08:29:00 = GET !"5BED01BB.01\/29" !
+20-03-26 08:29:07 = GET !"5BED01BB.01\/29" !
+20-03-26 08:29:43 = GET !"5BED01BB.01\/29" !
+20-03-26 11:05:20 = GET !"9MSGRDK03\/03" !
+20-03-26 11:08:14 = POST !{"salesforce_id":"a022u0000017Yu1AAE","external_id":"1448147","bank_code":"CIMB","status":"Pending","xendit_id":"5e0428f33e458f18738ef3f5"} !
+20-03-26 11:09:56 = Expired POST !{"salesforce_id":"a022u0000017Yu1AAE","external_id":"1448147","bank_code":"CIMB","status":"Expired","xendit_id":"5e0428f33e458f18738ef3f5"} !
+20-03-26 11:09:57 = GET !"9MSGRDK03\/03" !
+20-03-26 11:10:31 = GET !"9MSGRDK03\/03" !
+20-03-26 10:50:00 = Expired All POST ![] !

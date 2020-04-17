@@ -1,0 +1,5 @@
+
+20-01-23 10:30:16 = POST (Get Key) !{"grant_type":"password","client_id":"3MVG9G9pzCUSkzZvdA4eKm_jdVZVXQ5U2c0L6gyvdnC.WqwoLIqfj2j8vfExyjTTvNQBdogzzrCLuPpkdmgbt","client_secret":"C823D7F2BFC8688FF1ADF9A0B8873EFECD9D2F22E85C2538127458A2FCB16F88","username":"ciputrapropertyy-cisv@force.com","password":"Salesforce2019ZSq9OdbkPDFtmqNvOqDIdBhZ8"} !
+20-01-23 10:30:16 = POST !"{\"Status__c\":\"Paid\",\"Paid_Date__c\":\"2020-01-23T03:30:16.000Z\"}" !
+20-01-23 10:38:54 = POST (Get Key) !{"grant_type":"password","client_id":"3MVG9G9pzCUSkzZvdA4eKm_jdVZVXQ5U2c0L6gyvdnC.WqwoLIqfj2j8vfExyjTTvNQBdogzzrCLuPpkdmgbt","client_secret":"C823D7F2BFC8688FF1ADF9A0B8873EFECD9D2F22E85C2538127458A2FCB16F88","username":"ciputrapropertyy-cisv@force.com","password":"Salesforce2019ZSq9OdbkPDFtmqNvOqDIdBhZ8"} !
+20-01-23 10:38:55 = POST !"{\"Status__c\":\"Paid\",\"Paid_Date__c\":\"2020-01-23T03:38:55.000Z\"}" !

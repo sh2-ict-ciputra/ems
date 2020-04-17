@@ -1,0 +1,28 @@
+{
+    "sqltools.connections": [
+        {
+            "askForPassword": false,
+            "connectionTimeout": 15,
+            "database": "ciputraEms",
+            "dialect": "MSSQL",
+            "domain": null,
+            "name": "local",
+            "password": "abc123?",
+            "port": 1433,
+            "server": "localhost",
+            "username": "sa"
+        },
+        {
+            "askForPassword": false,
+            "connectionTimeout": 15,
+            "database": "ciputraEms",
+            "dialect": "MSSQL",
+            "domain": null,
+            "name": "SERVER",
+            "password": "abc123?",
+            "port": 1433,
+            "server": "80.211.11.164",
+            "username": "sa"
+        }
+    ]
+}

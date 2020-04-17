@@ -1,0 +1,2 @@
+
+20-01-22 03:15:09 = POST !{"updated":"2020-01-22T08:15:08.570Z","created":"2020-01-22T08:15:07.573Z","amount":12000,"callback_virtual_account_id":"5de0c30dd69618347b084e0c","payment_id":"8182cda0-ea06-4775-bb7f-815d9ada51d5","external_id":"854046","account_number":"120001680617","merchant_code":"6479","bank_code":"CIMB","transaction_timestamp":"2020-01-22T08:15:10.000Z","currency":"IDR","id":"5e28048bf71955388e2c8fb1","owner_id":"5dc20f208ba1f722fa4df3db"} !

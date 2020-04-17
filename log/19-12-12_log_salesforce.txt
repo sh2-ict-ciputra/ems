@@ -1,0 +1,7 @@
+
+19-12-12 10:27:30 = GET !"9AVERSAA15\/70" !
+19-12-12 10:33:14 = GET !"9AVERSAA15\/70" !
+19-12-12 10:34:54 = POST !{"salesforce_id":"a022u0000017St0AAE","external_id":"851133","bank_code":"CIMB","status":"Pending","xendit_id":"5ddcdc5ed69618347b045828"} !
+19-12-12 10:38:01 = GET !"9AVERSAA15\/70" !
+19-12-12 10:38:14 = GET !"9AVERSAA15\/70" !
+19-12-12 10:38:16 = GET !"9AVERSAA15\/70" !

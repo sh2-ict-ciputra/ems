@@ -1,0 +1,22 @@
+
+20-01-29 08:59:59 = GET !"2076MV-CAB.02\/08" !
+20-01-29 09:00:12 = GET !"2076MV-CAB.02\/08" !
+20-01-29 09:17:07 = GET !"9MSGRDK02\/02" !
+20-01-29 02:49:04 = GET !"9MSGRDK03\/03" !
+20-01-29 02:52:10 = GET !"9MSGRDK03\/03" !
+20-01-29 02:53:18 = GET !"9MSGRDK03\/03" !
+20-01-29 03:05:40 = GET !"9MSGRDK03\/03" !
+20-01-29 03:06:05 = POST !{"salesforce_id":"a022u0000017V2iAAE","external_id":"20752","bank_code":"BRI","status":"Pending","xendit_id":"5e1e9ea7699a4a5e82a83f28"} !
+20-01-29 03:10:42 = Expired POST !{"salesforce_id":"a022u0000017V2iAAE","external_id":"20752","bank_code":"BRI","status":"Expired","xendit_id":"5e1e9ea7699a4a5e82a83f28"} !
+20-01-29 03:10:43 = GET !"9MSGRDK03\/03" !
+20-01-29 03:13:36 = GET !"9MSGRDK03\/03" !
+20-01-29 03:13:49 = POST !{"salesforce_id":"a022u0000017V2nAAE","external_id":"20752","bank_code":"BRI","status":"Pending","xendit_id":"5e1e9ea7699a4a5e82a83f28"} !
+20-01-29 03:14:00 = GET !"9MSGRDK03\/03" !
+20-01-29 03:14:13 = GET !"9MSGRDK03\/03" !
+20-01-29 03:15:11 = GET !"9MSGRDK03\/03" !
+20-01-29 03:15:48 = GET !"9MSGRDK03\/03" !
+20-01-29 03:17:10 = Expired POST !{"salesforce_id":"a022u0000017V2nAAE","external_id":"20752","bank_code":"BRI","status":"Expired","xendit_id":"5e1e9ea7699a4a5e82a83f28"} !
+20-01-29 03:17:11 = GET !"9MSGRDK03\/03" !
+20-01-29 03:17:24 = GET !"9MSGRDK03\/03" !
+20-01-29 03:23:12 = GET !"9MSGRDK03\/03" !
+20-01-29 10:50:00 = Expired All POST ![] !

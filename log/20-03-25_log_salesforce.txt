@@ -1,0 +1,8 @@
+
+20-03-25 08:56:00 = GET !"5BSL01AZ.06\/03" !
+20-03-25 08:56:04 = GET !"5BSL01AZ.06\/03" !
+20-03-25 08:57:03 = GET !"5BSL01AZ.06\/03" !
+20-03-25 08:57:18 = POST !{"salesforce_id":"a022u0000017YpyAAE","external_id":"4812519","bank_code":"BCA","status":"Pending","xendit_id":"a022u0000017YpyAAE"} !
+20-03-25 08:58:36 = GET !"5BSL01AZ.06\/03" !
+20-03-25 11:50:53 = GET !"5BB01D.01\/95" !
+20-03-25 10:50:01 = Expired All POST ![] !

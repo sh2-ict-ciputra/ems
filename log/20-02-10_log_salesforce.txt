@@ -1,0 +1,14 @@
+
+20-02-10 09:42:59 = GET !"9MSGRDK02\/02" !
+20-02-10 09:43:56 = GET !"9MSGRDK02\/02" !
+20-02-10 09:57:29 = GET !"9MSGRDK06\/15" !
+20-02-10 10:02:55 = GET !"9MSGRDK06\/15" !
+20-02-10 10:03:56 = GET !"2076MV-LIE.01\/09" !
+20-02-10 10:16:54 = GET !"9MSGRDK06\/15" !
+20-02-10 10:17:24 = GET !"9MSGRDK06\/15" !
+20-02-10 10:49:18 = GET !"9MSGRDK06\/15" !
+20-02-10 10:52:13 = GET !"9MSGRDK06\/15" !
+20-02-10 10:52:35 = POST !{"salesforce_id":"a036D0000043KgcQAE","external_id":"18180","bank_code":"BCA","status":"Pending","xendit_id":"a036D0000043KgcQAE"} !
+20-02-10 10:53:22 = Expired POST !{"salesforce_id":"a036D0000043KgcQAE","external_id":"18180","bank_code":"BCA","status":"Expired","xendit_id":"a036D0000043KgcQAE"} !
+20-02-10 10:53:24 = GET !"9MSGRDK06\/15" !
+20-02-10 10:50:00 = Expired All POST ![] !

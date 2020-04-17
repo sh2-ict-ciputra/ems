@@ -1,0 +1,25 @@
+
+19-11-29 10:25:58 = GET ![] !
+19-11-29 10:28:19 = POST !{"salesforce_id":"a022u0000017SkDAAU","external_id":"851117","bank_code":"CIMB","status":"Pending","xendit_id":"5ddcdc5ed69618347b045828"} !
+19-11-29 10:29:04 = GET !"2076MV-CAB.12\/17" !
+19-11-29 10:29:34 = GET !"2076MV-CAB.12\/17" !
+19-11-29 10:31:30 = GET !"9AVERSAA15\/70" !
+19-11-29 10:36:52 = GET !"9AVERSAA15\/70" !
+19-11-29 10:41:10 = POST !{"salesforce_id":"a022u0000017SkIAAU","external_id":"851124","bank_code":"CIMB","status":"Pending","xendit_id":"5ddcdc5ed69618347b045828"} !
+19-11-29 10:47:05 = GET !"9AVERSAA15\/70" !
+19-11-29 10:54:36 = GET !"9AVERSAA15\/70" !
+19-11-29 10:55:58 = GET !"9AVERSAA15\\\/70" !
+19-11-29 10:56:06 = GET !"9AVERSAA15\/70" !
+19-11-29 11:05:49 = GET !"9AVERSAA15\/70" !
+19-11-29 11:06:57 = GET !"9AVERSAA15\/70" !
+19-11-29 11:07:11 = POST !{"salesforce_id":"a022u0000017SkNAAU","external_id":"851130","bank_code":"PERMATA","status":"Pending","xendit_id":"5de0996ed69618347b07fb7c"} !
+19-11-29 11:13:31 = GET !"9AVERSAA15\/70" !
+19-11-29 11:20:00 = GET !"9AVERSAA15\/70" !
+19-11-29 11:20:14 = POST !{"salesforce_id":"a022u0000017SkSAAU","external_id":"851131","bank_code":"PERMATA","status":"Pending","xendit_id":"5de0996ed69618347b07fb7c"} !
+19-11-29 02:03:26 = GET !"2076MV-CAB.02\/08" !
+19-11-29 02:04:46 = POST !{"salesforce_id":"a022u0000017SkmAAE","external_id":"20339","bank_code":"CIMB","status":"Pending","xendit_id":"5de0c30dd69618347b084e0c"} !
+19-11-29 02:47:37 = GET !"2076MV-CAB.12\/17" !
+19-11-29 02:50:08 = POST !{"salesforce_id":"a022u0000017SkwAAE","external_id":"862431","bank_code":"CIMB","status":"Pending","xendit_id":"5dde315ef54cfb4e2a3db043"} !
+19-11-29 03:41:15 = GET !"2076MV-CAB.12\/17" !
+19-11-29 03:41:57 = POST !{"salesforce_id":"a022u0000017SlBAAU","external_id":"862432","bank_code":"CIMB","status":"Pending","xendit_id":"5dde315ef54cfb4e2a3db043"} !
+19-11-29 04:02:42 = GET !"2076MV-CAB.12\/17" !

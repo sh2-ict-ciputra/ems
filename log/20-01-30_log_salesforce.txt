@@ -1,0 +1,21 @@
+
+20-01-30 07:39:29 = GET !"9MSGRDK03\/03" !
+20-01-30 08:52:10 = GET !"9MSGRDK03\/03" !
+20-01-30 09:24:28 = GET !"9MSGRDK02\/02" !
+20-01-30 09:39:17 = GET !"9MSGRDK03\/03" !
+20-01-30 10:07:04 = GET !"2076MV-CAB.02\/08" !
+20-01-30 10:08:13 = GET !"2076MV-CAB.02\/08" !
+20-01-30 10:11:04 = POST !{"salesforce_id":"a022u0000017V9eAAE","external_id":"854052;854051","bank_code":"CIMB","status":"Pending","xendit_id":"5de0c30dd69618347b084e0c"} !
+20-01-30 10:12:31 = GET !"2076MV-CAB.02\/08" !
+20-01-30 10:13:04 = Expired POST !{"salesforce_id":"a022u0000017V9eAAE","external_id":"854052;854051","bank_code":"CIMB","status":"Expired","xendit_id":"5de0c30dd69618347b084e0c"} !
+20-01-30 10:13:05 = GET !"2076MV-CAB.02\/08" !
+20-01-30 10:17:16 = GET !"2076MV-CAB.02\/08" !
+20-01-30 10:18:07 = GET !"2076MV-CAB.02\/08" !
+20-01-30 10:18:23 = POST !{"salesforce_id":"a022u0000017V9fAAE","external_id":"854051","bank_code":"CIMB","status":"Pending","xendit_id":"5de0c30dd69618347b084e0c"} !
+20-01-30 10:36:54 = GET !"2076MV-CAB.02\/08" !
+20-01-30 10:46:31 = GET !"2076MV-CAB.02\/08" !
+20-01-30 10:46:46 = GET !"2076MV-CAB.02\/08" !
+20-01-30 06:49:42 = GET !"2076MV-CAB.02\/08" !
+20-01-30 06:50:36 = GET !"2076MV-CAB.02\/08" !
+20-01-30 06:52:40 = GET !"2076MV-CAB.02\/08" !
+20-01-30 10:50:00 = Expired All POST ![] !

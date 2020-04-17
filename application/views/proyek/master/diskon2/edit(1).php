@@ -1,0 +1,361 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
+<!DOCTYPE html>
+<link href="<?=base_url()?>vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+<script src="<?=base_url()?>vendors/switchery/dist/switchery.min.js"></script>
+
+<link href="<?=base_url()?>vendors/select2/dist/css/select2.min.css" rel="stylesheet">
+<script src="<?=base_url()?>vendors/select2/dist/js/select2.min.js"></script>
+
+<!-- modals -->
+<!-- Large modal -->
+<div id="modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Detail Log</h4>
+            </div>
+
+            <div class="modal-body">
+                <table class="table table-striped jambo_table bulk_action">
+                    <thead>
+                        <tr>
+                            <th>Point Detail</th>
+                            <th>Before</th>
+                            <th>After</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dataModal">
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div style="float:right">
+    <h2>
+        <button class="btn btn-warning" onClick="window.history.back()">
+            <i class="fa fa-arrow-left"></i>
+            Back
+        </button>
+        <button class="btn btn-success" onClick="window.location.reload()">
+            <i class="fa fa-repeat"></i>
+            Refresh
+        </button>
+    </h2>
+</div>
+
+<div class="clearfix"></div>
+</div>
+
+<div class="x_content">
+    <br>
+    <form id="form" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="" method="post" action="<?=site_url()?>/P_master_diskon/edit?id=<?=$this->input->get('id')?>">
+
+        <div class="form-group">
+            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="gol_diskon_id">
+                Golongan Diskon
+                <span class="required">*</span>
+            </label>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <select type="text" id="gol_diskon_id" required="required" class="select2 form-control col-md-7 col-xs-12 disabled-form" name="gol_diskon_id" style="width:100%" disabled>
+                <option>--Pilih Golongan Diskon--</option>
+                    <?php
+                        foreach ($dataGolDiskon as $v) {
+                            if($v['gol_diskon_id'] == $dataDiskonSelect->gol_diskon_id){
+                                echo("<option value='$v[gol_diskon_id]' selected>$v[gol_diskon_name]</option>");
+                            }else{
+                                echo("<option value='$v[gol_diskon_id]'>$v[gol_diskon_name]</option>");
+                            }
+                        }
+                    ?>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="product_category_id">
+                Product Category
+                <span class="required">*</span>
+            </label>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <select type="text" id="product_category_id" required="required" class="select2 form-control col-md-7 col-xs-12 disabled-form" name="product_category_id" style="width:100%" disabled>
+                <option>--Pilih Product Category--</option>
+                    <?php
+                        foreach ($dataProductCategory as $v) {
+                            if($v['product_category_id'] == $dataDiskonSelect->product_category_id){
+                                echo("<option value='$v[product_category_id]' selected>$v[product_category_name]</option>");
+                            }else{
+                                echo("<option value='$v[product_category_id]'>$v[product_category_name]</option>");
+                            }
+                        }
+                    ?>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Deskripsi</label>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <textArea id="description" class="form-control col-md-7 col-xs-12 disabled-form" type="text" name="description"
+                    disabled><?=$dataDiskonSelect->description?></textArea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-3 col-sm-3 col-xs-12">Status</label>
+            <div class="col-md-9 col-sm-9 col-xs-12">
+                <div class="">
+                    <label>
+                        <input id="status" type="checkbox" class="js-switch disabled-form" name="status" value='1' <?=$dataDiskonSelect->active==1?'checked':''?>
+                        disabled/> Aktif
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <p>
+                <table class="table table-responsive">
+                    <thead>
+						<tr>
+							<th>No</th>
+							<th>Service</th>
+                            <th>Jenis Diskon</th>
+							<th>Parameter</th>
+							<th>Nilai</th>
+							<th>Hapus</th>
+						</tr>
+					</thead>
+                    <tbody id="tbody_diskon_detail">
+                        <?php
+
+                            $i = 0;
+                            foreach ($dataDiskonDetail  as $key => $v){
+                                $i++;
+                                echo("<tr id='srow".$i. "'>");
+                                echo("<td hidden><input name='diskon_detail_id[]' value='$v[diskon_detail_id]'> </td>");
+                                echo("<td class='no' >".$i."</td>");
+                                echo("<td>");
+                                echo("<select class='form-control disabled-form' name='service[] select2' disabled>");
+                                echo("<option value=''>--Pilih Jenis Service--</option>");
+                                foreach ($dataService as $key => $c){
+									if($v['service_id']==$c['id']){
+										echo("<option value='$c[id]' selected>$c[name] </option>"); 
+									}else{
+										echo("<option value='$c[id]'>$c[name] </option>");  
+									}
+								}
+                                echo("</td>");
+                                echo("<td><input type='checkbox' class='js-switch disabled-form' name='flag_umum_event[]' id='' value='1' ");
+                                echo($v['flag_umum_event'] == 1?'checked':'' ."> Umum </td>");
+                                echo("<td><input type='number' class='form-control disabled-form' name='parameter_id[]' placeholder='Masukkan Parameter'/ required value ='$v[parameter_id]' disabled></td>");
+                                echo("<td><input type='number' class='form-control disabled-form' name='nilai[]' placeholder='Masukkan Nilai Diskon'/ required value ='$v[nilai]' disabled></td>");
+                                echo("<td> <a class='btn btn-danger' href='#' style=\"color:#3399FD;\" onclick='hapusElemen(\"#srow" .$i. "\"); return false;'><i class='fa fa-trash'></i> </a></td>");
+                                echo("</tr>");
+                            }
+                        ?>
+                        <input id="idf" value="1" type="hidden" />
+                    </tbody>
+                </table>
+                <button id='btn-add-diskon_detail' type="button" class="btn btn-danger pull-right disabled-form"><i class="fa fa-plus"></i> Add Diskon Service</button>
+
+            </pre>
+        </div>
+
+        <div class="col-md-12">
+            <input id="btn-update" class="btn btn-success col-md-1 col-md-offset-5" value="Edit">
+            <input id="btn-cancel" class="btn btn-danger col-md-1" value="Cancel" style="display:none">
+        </div>
+
+    </form>
+</div>
+
+<div class="x_panel">
+
+    <div class="x_title">
+        <h2>Log</h2>
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="x_content">
+        <br>
+        <table class="table table-striped jambo_table bulk_action tableDT">
+
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Waktu</th>
+                    <th>User</th>
+                    <th>Status</th>
+                    <th>Detail</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <?php
+                    $i = 0;
+                    foreach ($data as $key => $v){
+                        $i++;
+                        echo('<tr>');
+                        echo("<td>$i</td>");
+                        echo("<td>$v[date]</td>");
+                        echo("<td>$v[name]</td>");
+                        echo("<td>");
+                        if($v['status']==1)
+                            echo("Tambah");
+                        elseif($v['status']==2)
+                            echo("Edit");
+                        else
+                            echo("Hapus");
+                        echo("</td>");
+                        echo("
+                            <td class='col-md-1'>
+                                <a class='btn-modal btn btn-sm btn-primary col-md-12' data-toggle='modal' data-target='#modal' data-transfer='$v[id]' data-type='$v[status]'>
+                                    <i class='fa fa-pencil'></i>
+                                </a>
+                            </td>
+                        ");
+                        echo('</td></tr>');                
+                    }
+                ?>
+            </tbody>
+
+        </table>
+    </div>
+
+</div>
+
+<!-- jQuery -->
+<script type="text/javascript">
+disableForm = 1;
+$(function() {
+    $("#btn-add-diskon_detail").click(function(){
+        if($(".no").html()){
+                idf = parseInt($(".no").last().html()) + 1;
+        }else{
+                idf = 1;
+        }
+
+        var str = "";
+        console.log(disableForm);
+        if(disableForm == 1){
+            str = "<tr id='srow" + idf + "'>"+
+                        "<td hidden><input name='diskon_detail_id[]' value='0'></td>"+
+                        "<td class='no'>"+idf+"</td>"+
+                        "<td>"+
+                            "<select class='select2 form-control disabled-form' name='service[] select2' disabled>"+
+                                "<option value=''>--Pilih Jenis Service--</option>"+
+                                "<?php foreach ($dataService as $key => $v){ ?>"+
+                                    "<option value='<?=$v['id']?>'><?=$v['name']?> </option>"+
+                                "<?php } ?>"+
+                            "</select>"+
+                        "</td>"+
+                        "<td><input type='checkbox' class='form-control disabled-form' name='flag_umum_event[]' id='' value='$v[flag_umum_event]' == 1?'checked':'' disabled required /> Umum </td>"+
+                        "<td><input type='number' class='form-control disabled-form' name='parameter_id[]' placeholder='Masukkan Parameter' disabled required /></td>"+
+                        "<td><input type='number' class='form-control disabled-form' name='nilai[]' placeholder='Masukan Nilai' disabled required /></td>"+
+                        "<td> <a class='btn btn-danger' href='#' style=\"color:#3399FD;\" onclick='hapusElemen(\"#srow" + idf + "\"); return false;'><i class='fa fa-trash'></i> </a></td>"+
+                  "</tr>";
+        }else{
+            str = "<tr id='srow" + idf + "'>"+
+                        "<td hidden><input name='diskon_detail_id[]' value='0'></td>"+
+                        "<td class='no'>"+idf+"</td>"+
+                        "<td>"+
+                            "<select class='select2 form-control disabled-form' name='service[] select2'>"+
+                                "<option value=''>--Pilih Jenis Service--</option>"+
+                                "<?php foreach ($dataService as $key => $v){ ?>"+
+                                    "<option value='<?=$v['id']?>'><?=$v['name']?> </option>"+
+                                "<?php } ?>"+
+                            "</select>"+
+                        "</td>"+
+                        "<td><input type='checkbox' class='js-switch disabled-form' name='flag_umum_event[]' id='flag_umum_event' value='$v[flag_umum_event]' == 1?'checked':'' required /> Umum </td>"+
+                        "<td><input type='number' class='form-control disabled-form' name='parameter_id[]' placeholder='Masukkan Parameter' required /></td>"+
+                        "<td><input type='number' class='form-control disabled-form' name='nilai[]' placeholder='Masukkan Nilai' required /></td>"+
+                        "<td> <a class='btn btn-danger' href='#' style=\"color:#3399FD;\" onclick='hapusElemen(\"#srow" + idf + "\"); return false;'><i class='fa fa-trash'></i> </a></td>"+
+                    "</tr>";
+        }
+
+        console.log(str);
+        $("#tbody_diskon_detail").append(str);
+        
+    });
+
+    function hapusElemen(idf) {
+        $(idf).remove();
+        var idf = document.getElementById("idf").value;
+        idf = idf-1;
+        document.getElementById("idf").value = idf;
+    }
+
+    $("#btn-update").click(function(){
+        disableForm = 0;
+        $(".disabled-form").removeAttr("disabled");
+        $("#btn-cancel").removeAttr("style");
+        $("#btn-update").val("Update");
+        $("#btn-update").attr("type","submit");
+    });
+
+    $("#btn-cancel").click(function(){
+        disableForm = 1;
+        $(".disabled-form").attr("disabled","")
+        $("#btn-cancel").attr("style","display:none");
+        $("#btn-update").val("Edit")
+        $("#btn-update").removeAttr("type");
+    });
+
+    $(".btn-modal").click(function(){
+        url = '<?=site_url()?>/core/get_log_detail';
+        console.log($(this).attr('data-transfer'));
+        console.log($(this).attr('data-type'));
+        $.ajax({
+            type: "POST",
+            data: {id:$(this).attr('data-transfer'),type:$(this).attr('data-type')},
+            url: url,
+            dataType: "json",
+            success: function(data){
+                console.log(data);
+                console.log($(this).attr('data-type'));
+                $("#dataModal").html("");
+                if(data[data.length-1] == 2){
+                    console.log(data[0]);
+                    for (i = 0; i < data[0].length; i++) { 
+                        $.each(data[1], function(key, val){
+                            if(val.name == data[0][i].name){
+                                console.log(val.name);
+                                $("#dataModal").append("<tr><th>"+data[0][i].name+"</th><td>"+val.value+"</td><td>"+data[0][i].value+"</td></tr>");        
+                            }
+                        }); 
+                    }
+                }else{
+                    $.each(data, function(key, val){
+                        if(data[data.length-1] == 1){
+                            console.log(data);
+                            if(val.name)
+                                $("#dataModal").append("<tr><th>"+val.name.toUpperCase()+"</th><td></td><td>"+val.value+"</td></tr>");
+                        }else if(data[data.length-1] == 2){
+                                
+                        }else if(data[data.length-1] == 3){
+                            console.log(data);
+                            if(val.name)
+                                $("#dataModal").append("<tr><th>"+val.name.toUpperCase()+"</th><td>"+val.value+"</td><td></td></tr>");
+                        }
+                    });
+                }
+            
+            }
+        });
+    });
+    $('.select2').select2({ width: 'resolve' });
+
+});
+</script>

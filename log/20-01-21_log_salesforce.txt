@@ -1,0 +1,9 @@
+
+20-01-21 01:41:50 = GET !"2076MV-CAB.02\/08" !
+20-01-21 01:42:28 = POST !{"salesforce_id":"a022u0000017UKCAA2","external_id":"854046","bank_code":"CIMB","status":"Pending","xendit_id":"5de0c30dd69618347b084e0c"} !
+20-01-21 01:56:06 = GET !"2076MV-CAB.02\/08" !
+20-01-21 02:21:13 = GET !"9AVERSAA15\/70" !
+20-01-21 02:21:42 = POST !{"salesforce_id":"a022u0000017UL0AAM","external_id":"911779","bank_code":"BRI","status":"Pending","xendit_id":"5ddd049ef54cfb4e2a3d40b4"} !
+20-01-21 02:29:19 = GET !"9AVERSAA15\/70" !
+20-01-21 02:29:48 = POST !{"salesforce_id":"a022u0000017UL5AAM","external_id":"911780","bank_code":"PERMATA","status":"Pending","xendit_id":"5de0996ed69618347b07fb7c"} !
+20-01-21 02:39:02 = POST !{"salesforce_id":"a036D000003HAVYQA4","external_id":"18180","bank_code":"PERMATA","status":"Pending","xendit_id":"5dcd14a9bd3282f27df2b90f"} !

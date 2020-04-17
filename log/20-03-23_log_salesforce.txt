@@ -1,0 +1,9 @@
+
+20-03-23 10:51:10 = GET !"2076MV-APA.01\/01" !
+20-03-23 01:31:50 = GET !"2076MV-APA.01\/01" !
+20-03-23 01:37:30 = GET !"2076MV-APA.01\/01" !
+20-03-23 01:42:21 = POST !{"salesforce_id":"a022u0000017YlhAAE","external_id":"4812713;4812714;4812713","bank_code":"CIMB","status":"Pending","xendit_id":"5e6af459019429112bbd5086"} !
+20-03-23 01:47:24 = Expired POST !{"salesforce_id":"a022u0000017YlhAAE","external_id":"4812713;4812714;4812713","bank_code":"CIMB","status":"Expired","xendit_id":"5e6af459019429112bbd5086"} !
+20-03-23 01:47:25 = GET !"2076MV-APA.01\/01" !
+20-03-23 01:48:21 = GET !"2076MV-APA.01\/01" !
+20-03-23 10:50:04 = Expired All POST ![] !

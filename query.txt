@@ -1,0 +1,4 @@
+SELECT *
+FROM "ems"."dbo"."project"
+WHERE "source_table" = '2'
+AND "source_id" = 2076

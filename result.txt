@@ -1,0 +1,1 @@
+{"result_code":1,"result_text":"Data Berhasil di Migrasi dari EREMS ke EMS","data_code":{"customer":1,"kawasan":2,"blok":1,"purpose_use":3,"unit":1},"data_text":{"customer":"Data Berhasil di Tambah","kawasan":"Data Source_table dan Source_id Berhasil di Update","blok":"Data Berhasil di Tambah","purpose_use":"Data Sudah Ada","unit":"Data Berhasil di Tambah"}}
